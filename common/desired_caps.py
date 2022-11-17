@@ -13,12 +13,12 @@ def appium_desired():
     :return:
     """
     with open('../config/config.yaml','r',encoding='utf-8')as file:
-        data=yaml.load(file)
+        data=yaml.load(file,Loader=yaml.FullLoader)
     #创建设备信息
     desired_caps={}
     desired_caps['platformName']=data['platformName']
-    desired_caps['platformVersion']=data['platformVersion'] # #在手机设置，关于平板电脑可以找到版本
-    desired_caps['deviceName']=data['deviceName'] #模拟器上设备的名称 在cmd下用adb devices显示的地址
+    # desired_caps['platformVersion']=data['platformVersion'] # #在手机设置，关于平板电脑可以找到版本
+    # desired_caps['deviceName']=data['deviceName'] #模拟器上设备的名称 在cmd下用adb devices显示的地址
     desired_caps['appPackage']=data['appPackage']#通讯录包名
     desired_caps['appActivity']=data['appActivity']#app活动名
 

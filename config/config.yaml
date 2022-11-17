@@ -1,6 +1,6 @@
 platformName: Android
-platformVersion: 7.1.2
-deviceName: 127.0.0.1:62001
+#platformVersion: 7.1.2
+#deviceName: 127.0.0.1:62001
 appPackage: com.android.contacts
 appActivity: .activities.PeopleActivity
 url: http://127.0.0.1:4723/wd/hub

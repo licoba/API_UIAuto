@@ -6,8 +6,8 @@ class BaseView(object):
     def find_element(self,*loc):
         return self.driver.find_element(*loc)
 
-    def find_elemets(self,*loc):
-        return self.find_elemets(*loc)
+    def find_elements(self,*loc):
+        return self.find_elements(*loc)
 
     def get_window_size(self):
         return self.driver.get_windows_size()
