@@ -13,7 +13,7 @@ def appium_desired():
     :return:
     """
     with open('../config/config.yaml','r',encoding='utf-8')as file:
-        data=yaml.load(file)
+        data=yaml.load(file, Loader=yaml.FullLoader)
     #创建设备信息
     desired_caps={}
     desired_caps['platformName']=data['platformName']
