@@ -3,11 +3,12 @@ from common.desired_caps import appium_desired
 import logging
 from time import sleep
 class StartEnd(unittest.TestCase):
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
         logging.info("---------------setup-------------")
-        self.driver=appium_desired()
-
-    def tearDown(self):
+        cls.driver=appium_desired()
+    @classmethod
+    def tearDownClass(cls):
         logging.info("---------------tearDown---------")
         sleep(5)
-        self.driver.close_app()
+        # self.driver.close_app()
